@@ -25,7 +25,7 @@ using namespace std;
 // }
 
 
-// O(n)
+// O(n) --> sliding window approach
 vector<int> subarraySum(int arr[], int n, ll s) {
     int i=0, j=0, sum=0;
 
