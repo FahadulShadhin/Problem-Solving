@@ -38,5 +38,5 @@ node.next = ListNode(1)
 
 make node.val = ListNode(5).next.val = ListNode(1).val = 1
 make node.next = ListNode(5).next.next = ListNode(1).next = ListNode(9)
-list becomes: 4 -> 1 -> 9
+list becomes: 4 -> 1 -> 9 -> None
 """
