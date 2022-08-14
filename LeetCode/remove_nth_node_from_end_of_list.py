@@ -9,6 +9,7 @@
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
         # 2 pass 
+        """
         size = 0
         temp = head
         while temp is not None:
@@ -27,4 +28,25 @@ class Solution:
             curNode = curNode.next
 
         curNode.next = curNode.next.next
+        return head
+        """
+
+        # 1 pass
+        if head.next is None:
+            return head.next
+        
+        slow = head
+        fast = head
+        for _ in range(n):
+            fast = fast.next
+        
+        if fast is not None:
+            while fast.next is not None:
+                slow = slow.next
+                fast = fast.next
+            slow.next = slow.next.next
+        else:
+            slow.val = slow.next.val
+            slow.next = slow.next.next
+        
         return head
