@@ -20,7 +20,7 @@ class Solution:
         return nums
         """
 
-        # without extra memory
+        # without extra space (output array doesn't count as extra space)
         n = len(nums)
         res = [1]*n
         pre = 1
