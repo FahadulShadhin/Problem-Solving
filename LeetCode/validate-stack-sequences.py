@@ -2,9 +2,6 @@
 
 class Solution:
     def validateStackSequences(self, pushed: List[int], popped: List[int]) -> bool:
-        n = len(pushed)
-        m = len(popped)
-        
         stack = []
         
         for val in pushed:
