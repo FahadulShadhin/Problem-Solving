@@ -1,6 +1,7 @@
 # https://leetcode.com/problems/find-and-replace-pattern/ 
 
 class Solution:
+    # matchPattern() function is the solution of the problem "Isomorphic Strings": https://leetcode.com/problems/isomorphic-strings/ 
     def matchPattern(self, s: str, t: str) -> bool:
         m = defaultdict(str)
 
@@ -16,7 +17,7 @@ class Solution:
     
     def findAndReplacePattern(self, words: List[str], pattern: str) -> List[str]:
         res = []
-        
+
         for word in words:
             if self.matchPattern(pattern, word):
                 res.append(word)
