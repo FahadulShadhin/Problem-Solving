@@ -1,5 +1,3 @@
-# https://leetcode.com/problems/surrounded-regions/ 
-
 class Solution:
 #     def dfs(self, r, c, board, rows, cols):
 #         if r not in range(rows) or c not in range(cols) or board[r][c] != 'O':
@@ -12,12 +10,10 @@ class Solution:
 #         for dx, dy in directions:
 #             self.dfs(r+dx, c+dy, board, rows, cols)
 
-    def bfs(self, r, c, board, rows, cols, visited):
+    def bfs(self, r, c, board, rows, cols):
         q = deque()
-        
         q.append((r, c))
         board[r][c] = 'T'
-        visited.add((r, c))
         
         while q:
             row, col = q.popleft()
@@ -25,10 +21,9 @@ class Solution:
             
             for dx, dy in directions:
                 r, c = row+dx, col+dy
-                if r in range(rows) and c in range(cols) and board[r][c] == 'O' and board[r][c] not in visited:
+                if r in range(rows) and c in range(cols) and board[r][c] == 'O' and board[r][c]:
                     q.append((r, c))
                     board[r][c] = 'T'
-                    visited.add((r, c))
         
         
     def solve(self, board: List[List[str]]) -> None:
@@ -36,13 +31,12 @@ class Solution:
         Do not return anything, modify board in-place instead.
         """
         rows, cols = len(board), len(board[0])
-        visited = set()
         
         # find border 'O's and replace then with 'T's
         for r in range(rows):
             for c in range(cols):
                 if board[r][c] == 'O' and (r in [0, rows-1] or c in [0, cols-1]):
-                    self.bfs(r, c, board, rows, cols, visited)
+                    self.bfs(r, c, board, rows, cols)
                     # self.dfs(r, c, board, rows, cols)
 
         # replace 'O's with 'X's            
