@@ -1,7 +1,7 @@
 # https://leetcode.com/problems/island-perimeter/ 
 
 class Solution:
-    def calculate_perimeter(self, r, c, grid, rows, cols, visited):
+    def calculatePerimeter(self, r, c, grid, rows, cols, visited):
         q = deque()
         visited.add((r, c))
         q.append((r, c))
@@ -31,4 +31,4 @@ class Solution:
         for r in range(rows):
             for c in range(cols):
                 if (r, c) not in visited and grid[r][c] == 1:
-                    return self.calculate_perimeter(r, c, grid, rows, cols, visited)
+                    return self.calculatePerimeter(r, c, grid, rows, cols, visited)
