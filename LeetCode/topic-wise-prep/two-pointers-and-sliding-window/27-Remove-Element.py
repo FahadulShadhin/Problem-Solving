@@ -7,8 +7,7 @@ class Solution:
             if nums[i] != val:
                 i += 1
             elif nums[i] == val and nums[j] != val:
-                nums[i] = nums[j]
-                nums[j] = val
+                nums[i], nums[j] = nums[j], nums[i]
                 i += 1
                 j -= 1
             else:
