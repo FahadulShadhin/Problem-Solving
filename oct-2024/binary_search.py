@@ -59,7 +59,7 @@ def binary_search_last_occurance(arr: list[int], target: int) -> str:
 
 
 if __name__=="__main__":
-  arr = [-1, -2, -2, -2, 0, 1, 2, 3, 4]
+  arr = [-3, -2, -2, -2, -1, 0, 1, 2, 3, 4]
   print(binary_search(arr, -2))
   print(binary_search_first_occurance(arr, -2))
   print(binary_search_last_occurance(arr, -2))
