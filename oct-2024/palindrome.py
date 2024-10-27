@@ -14,5 +14,9 @@ def isPalindrome(word1: str, word2:str) -> bool:
     
   return True
 
+def isPalindrome1(word1: str, word2: str) -> bool:
+  return word1 == word2[::-1]
+
 if __name__=='__main__':
   print(isPalindrome('abcde', 'edcba'))
+  print(isPalindrome1('abcde', 'edcba'))
