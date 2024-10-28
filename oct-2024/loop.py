@@ -33,6 +33,11 @@ for indx, val in enumerate(arr):
 print('___________________________')
 
 for key in user:
+  if (key != 'name'):
+    print(user[key])
+print('___________________________')
+
+for key in user:
   print(key)
 print('___________________________')
 
