@@ -15,7 +15,7 @@ def binary_search(arr: list[int], target: int) -> str:
   return f'{target} not found'
 
 
-def binary_search_recursive(arr: list[int], target: int, start, end) -> str:
+def binary_search_recursive(arr: list[int], target: int, start: int, end: int) -> str:
   if (start > end):
     return -1
 
@@ -76,6 +76,6 @@ def binary_search_last_occurance(arr: list[int], target: int) -> str:
 if __name__=="__main__":
   arr = [-3, -2, -2, -2, -1, 0, 1, 2, 3, 4]
   # print(binary_search(arr, -2))
-  print(binary_search_recursive(arr, 0, 0, len(arr) - 1))
+  print(binary_search_recursive(arr, 1, 0, len(arr) - 1))
   # print(binary_search_first_occurance(arr, -2))
   # print(binary_search_last_occurance(arr, -2))
